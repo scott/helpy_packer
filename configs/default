@@ -1,0 +1,22 @@
+server {
+    listen 80;
+    server_name yourserver.com;
+
+    # Tell Nginx and Passenger where your app's 'public' directory is
+    root /home/deploy/helpy/public;
+
+    # Turn on Passenger
+    passenger_user deploy;
+    passenger_enabled on;
+    passenger_ruby /usr/bin/passenger_free_ruby;
+    passenger_friendly_error_pages off;
+
+    # Configure ENV vars to turn on remote filestore (optional)
+    # REQUIRES HELPY 2.3+
+    passenger_env_var REMOTE_STORAGE false;
+    # passenger_env_var S3_KEY change_key;
+    # passenger_env_var S3_SECRET change_secret;
+    # passenger_env_var S3_REGION change_region;
+    # passenger_env_var S3_ENDPOINT change_endpoint;
+    # passenger_env_var S3_BUCKET_NAME change_bucket_name;
+}

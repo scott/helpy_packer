@@ -1,0 +1,21 @@
+#!/bin/sh
+cat <<EOF
+--------------------------------------------------------------------------------
+Welcome to the Digital Ocean Helpy Marketplace Image
+
+Helpy is an open source Helpdesk application, that includes support ticketing,
+a helpcenter and knowledgebase for your customers, and customer support forums.
+
+You can learn more about using Helpy at: https://support.helpy.io
+
+Information for administrators:
+
+Helpy is set up to run under the deploy user account.
+This image runs Passenger with Nginx and Postgres.
+
+
+Helpy is Open Source Software and comes with absolutely no warranty
+Read the full MIT license here: /home/deploy/helpy/LICENSE
+
+--------------------------------------------------------------------------------
+EOF

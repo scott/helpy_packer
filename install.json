@@ -1,0 +1,40 @@
+{
+    "variables": {
+        "do_api_token": ""
+    },
+    "builders": [
+        {
+            "ssh_username": "root",
+            "type": "digitalocean",
+            "api_token": "{{user `do_api_token`}}",
+            "size": "1GB",
+            "region": "nyc3",
+            "image": "ubuntu-18-04-x64",
+            "droplet_name": "packer",
+            "snapshot_name": "helpy2-3-packer"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "configs/",
+            "destination": "/tmp"
+        },        
+        {
+            "type": "shell",
+            "script": "scripts/01_setup_machine.sh"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/02_install_helpy.sh"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/cleanup.sh"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/img_check.sh"
+        }
+    ]
+}

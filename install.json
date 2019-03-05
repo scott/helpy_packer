@@ -1,7 +1,4 @@
 {
-    "variables": {
-        "do_api_token": ""
-    },
     "builders": [
         {
             "ssh_username": "root",
@@ -22,19 +19,17 @@
         },        
         {
             "type": "shell",
-            "script": "scripts/01_setup_machine.sh"
-        },
-        {
-            "type": "shell",
-            "script": "scripts/02_install_helpy.sh"
-        },
-        {
-            "type": "shell",
-            "script": "scripts/cleanup.sh"
-        },
-        {
-            "type": "shell",
-            "script": "scripts/img_check.sh"
+            "environment_vars": [
+                "RUBY={{user `ruby_version`}}",
+                "RAILS={{user `rails_version`}}",
+                "HELPY_BRANCH={{user `helpy_branch`}}"
+            ],
+            "scripts": [
+                "scripts/01_setup_machine.sh",
+                "scripts/02_install_helpy.sh",
+                "scripts/03_cleanup.sh",
+                "scripts/04_img_check.sh"
+            ]
         }
     ]
 }

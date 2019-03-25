@@ -4,11 +4,11 @@
             "ssh_username": "root",
             "type": "digitalocean",
             "api_token": "{{user `do_api_token`}}",
-            "size": "1GB",
+            "size": "s-1vcpu-1gb",
             "region": "nyc3",
             "image": "ubuntu-18-04-x64",
             "droplet_name": "packer",
-            "snapshot_name": "helpy2-3-packer"
+            "snapshot_name": "helpy2-4"
         }
     ],
     "provisioners": [

@@ -20,6 +20,10 @@ apt-get upgrade -y -qq
 # Install extra libraries for Helpy/rails
 apt-get install -y -qq git-core imagemagick postgresql postgresql-contrib libpq-dev curl build-essential zlib1g-dev libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libcurl4-openssl-dev libxml2-dev libxslt1-dev software-properties-common nodejs gnupg2
 
+# Install Certbot
+add-apt-repository ppa:certbot/certbot
+apt install python-certbot-nginx
+
 # add deploy user
 adduser --disabled-password deploy
 usermod -aG sudo deploy

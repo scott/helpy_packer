@@ -1,15 +1,17 @@
 #!/bin/sh
 cat <<EOF
------------------------------------------------------------------------------------
-Welcome to the Digital Ocean Helpy Marketplace Image 1.1
+---------------------------------------------------------
+Welcome to the Digital Ocean Helpy Marketplace Image 
 
-Helpy is a software platform that provides everything you need to run an awesome
-ticketing helpdesk and self service helpcenter website. You can even run a support
-forum where customers can help each other.
+Helpy is a software platform that provides everything you 
+need to run an awesome ticketing helpdesk and self service 
+helpcenter website. You can even run a support forum 
+where customers can help each other.
 
-Helpy is an open core application, which means the core functionality is open source,
-but there is additional functionality you can get if you become a supporter, sponsor,
-or a commercial customer.
+Helpy is an open core application, which means the core 
+functionality is open source, but there is additional 
+functionality you can get if you become a supporter, 
+sponsor, or a commercial customer.
 
 About Helpy: https://helpy.io/
 Using Helpy: https://support.helpy.io
@@ -17,11 +19,12 @@ Helpy on Github: https://github.com/helpyio/helpy
 
 Information for administrators:
 
-Helpy is set up to run under the deploy user account, and you should generally
-log in with deploy for management purposes. This image runs Passenger with Nginx 
-and Postgres.
+Helpy is set up to run under the deploy user account, and 
+you should generally log in with deploy for management 
+purposes. This image runs Passenger with Nginx and Postgres.
 
-Helpy is Open Source Software. Read the full MIT license here: /home/deploy/helpy/LICENSE
+Helpy is Open Source Software. Read the full MIT 
+license here: /home/deploy/helpy/LICENSE
 
-------------------------------------------------------------------------------------
+---------------------------------------------------------
 EOF

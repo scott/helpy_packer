@@ -2,5 +2,6 @@
     "do_api_token": "your_digitalocean_token",
     "branch":"master",
     "ruby_version":"2.4.5",
-    "rails_version":"4.2.11"
+    "rails_version":"4.2.11",
+    "image_name": "helpy2-4-1"
 }
